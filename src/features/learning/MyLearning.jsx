@@ -1,4 +1,4 @@
-import  "./Mylearning.css";
+import "./MyLearning.css";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BookOpen, PlayCircle, CheckCircle2 } from "lucide-react";
