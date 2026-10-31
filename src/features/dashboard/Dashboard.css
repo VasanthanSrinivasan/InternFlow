@@ -1,0 +1,844 @@
+
+/* ==========================================
+   INTERNFLOW — PROFESSIONAL DASHBOARD
+========================================== */
+
+.dashboard-page {
+  --dash-primary: #5547e8;
+  --dash-primary-dark: #4435ce;
+  --dash-text: #202944;
+  --dash-muted: #7b859b;
+  --dash-border: #e8ecf4;
+
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px;
+  color: var(--dash-text);
+  background: #f5f7fc;
+  font-family: Inter, "Segoe UI", sans-serif;
+  box-sizing: border-box;
+}
+
+.dashboard-page *,
+.dashboard-page *::before,
+.dashboard-page *::after {
+  box-sizing: border-box;
+}
+
+/* ---------- Welcome Banner ---------- */
+
+.dashboard-page .welcome-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  min-height: 225px;
+  margin-bottom: 28px;
+  padding: 35px 40px;
+  overflow: hidden;
+  color: #ffffff;
+  background: linear-gradient(
+    120deg,
+    #4034b7 0%,
+    #5547e8 55%,
+    #8176f4 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 23px;
+  box-shadow: 0 13px 32px rgba(85, 71, 232, 0.17);
+}
+
+.dashboard-page .welcome-banner::before {
+  position: absolute;
+  top: -170px;
+  right: 110px;
+  width: 370px;
+  height: 370px;
+  content: "";
+  background: rgba(255, 255, 255, 0.065);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.dashboard-page .welcome-banner::after {
+  position: absolute;
+  right: -80px;
+  bottom: -220px;
+  width: 430px;
+  height: 430px;
+  content: "";
+  background: rgba(255, 255, 255, 0.075);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.dashboard-page .welcome-banner > div:first-child {
+  position: relative;
+  z-index: 1;
+  max-width: 650px;
+}
+
+.dashboard-page .welcome-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 14px;
+  color: #e4e1ff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.dashboard-page .welcome-eyebrow::before {
+  width: 22px;
+  height: 3px;
+  content: "";
+  background: #c9c2ff;
+  border-radius: 8px;
+}
+
+.dashboard-page .welcome-banner h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(27px, 3.5vw, 39px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -1.2px;
+}
+
+.dashboard-page .welcome-banner p {
+  max-width: 550px;
+  margin: 13px 0 0;
+  color: #e4e5ff;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ---------- Welcome Illustration ---------- */
+
+.dashboard-page .welcome-art {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 125px;
+  height: 125px;
+  margin-right: 35px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 31px;
+  box-shadow: 0 12px 30px rgba(32, 25, 112, 0.12);
+  transform: rotate(-5deg);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease;
+}
+
+.dashboard-page .welcome-art:hover {
+  transform: rotate(0deg) translateY(-4px);
+}
+
+/* ---------- Statistics Grid ---------- */
+
+.dashboard-page .dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 19px;
+  margin-bottom: 27px;
+}
+
+/* StatCard shared styles.
+   These styles apply when StatCard uses these class names. */
+
+.dashboard-page .stat-card {
+  position: relative;
+  min-width: 0;
+  padding: 23px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--dash-border);
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(35, 45, 80, 0.035);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.dashboard-page .stat-card:hover {
+  transform: translateY(-4px);
+  border-color: #d7d5ff;
+  box-shadow: 0 12px 26px rgba(66, 62, 160, 0.08);
+}
+
+.dashboard-page .stat-card h3,
+.dashboard-page .stat-card p {
+  overflow-wrap: anywhere;
+}
+
+.dashboard-page .stat-card svg {
+  flex-shrink: 0;
+}
+
+/* Supports common StatCard icon wrappers. */
+
+.dashboard-page .stat-icon,
+.dashboard-page .stat-card .stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 18px;
+  color: #5547e8;
+  background: #efedff;
+  border: 1px solid #e5e1ff;
+  border-radius: 14px;
+}
+
+/* ---------- Attention Banner ---------- */
+
+.dashboard-page .todo-banner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 26px;
+  padding: 21px 24px;
+  background: linear-gradient(110deg, #fffaf0, #fffdf8);
+  border: 1px solid #f5dfad;
+  border-left: 4px solid #eca93e;
+  border-radius: 15px;
+  box-shadow: 0 4px 14px rgba(160, 115, 33, 0.035);
+}
+
+.dashboard-page .todo-banner > strong {
+  flex-shrink: 0;
+  padding-top: 4px;
+  color: #80551b;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.dashboard-page .todo-banner > div {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dashboard-page .todo-banner a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #96621b;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: right;
+  text-decoration: none;
+}
+
+.dashboard-page .todo-banner a:hover {
+  color: #68400d;
+  text-decoration: underline;
+}
+
+/* ---------- Charts Grid ---------- */
+
+.dashboard-page .dashboard-charts {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(300px, 1fr);
+  align-items: stretch;
+  gap: 23px;
+  margin-bottom: 26px;
+}
+
+.dashboard-page .panel {
+  min-width: 0;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid var(--dash-border);
+  border-radius: 19px;
+  box-shadow: 0 5px 22px rgba(31, 41, 82, 0.035);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.dashboard-page .panel:hover {
+  border-color: #e0e2f4;
+  box-shadow: 0 8px 25px rgba(31, 41, 82, 0.05);
+}
+
+/* ---------- Panel Headings ---------- */
+
+.dashboard-page .panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 21px;
+}
+
+.dashboard-page .panel-heading > div {
+  min-width: 0;
+}
+
+.dashboard-page .panel-heading h3 {
+  margin: 0;
+  color: #26314b;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: -0.3px;
+}
+
+.dashboard-page .panel-heading p {
+  margin: 7px 0 0;
+  color: #8992a6;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* ---------- Chart Period ---------- */
+
+.dashboard-page .chart-period {
+  flex-shrink: 0;
+  padding: 8px 11px;
+  color: #6055ce;
+  background: #f1efff;
+  border: 1px solid #e7e3ff;
+  border-radius: 9px;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+/* ---------- Recharts Containers ---------- */
+
+.dashboard-page .chart-area {
+  width: 100%;
+  height: 285px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.dashboard-page .chart-area .recharts-responsive-container {
+  min-width: 0;
+}
+
+.dashboard-page .chart-area .recharts-cartesian-axis-tick-value {
+  fill: #8791a6;
+  font-size: 11px;
+}
+
+.dashboard-page .chart-area .recharts-cartesian-grid-horizontal line {
+  stroke: #edf0f6;
+}
+
+.dashboard-page .chart-area .recharts-tooltip-cursor {
+  stroke: #d7d5ff;
+  stroke-dasharray: 4 4;
+}
+
+.dashboard-page .chart-area .recharts-default-tooltip {
+  padding: 11px 14px !important;
+  background: #ffffff !important;
+  border: 1px solid #e5e8f2 !important;
+  border-radius: 11px !important;
+  box-shadow: 0 8px 24px rgba(25, 35, 70, 0.1);
+}
+
+.dashboard-page .chart-area .recharts-tooltip-label {
+  margin-bottom: 6px;
+  color: #34405a !important;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.dashboard-page .chart-area .recharts-tooltip-item {
+  font-size: 11px;
+}
+
+/* ---------- Pie Chart ---------- */
+
+.dashboard-page .pie-chart-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+}
+
+.dashboard-page .pie-chart-area > p {
+  color: #929bb0;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* ---------- Status Legend ---------- */
+
+.dashboard-page .status-legend {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 18px;
+  border-top: 1px solid #edf0f6;
+}
+
+.dashboard-page .status-legend > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+  padding: 10px 11px;
+  background: #fafbfe;
+  border: 1px solid #eff1f6;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+.dashboard-page .status-legend > div:hover {
+  background: #f5f5ff;
+}
+
+.dashboard-page .status-legend > div > span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  color: #68738b;
+  font-size: 10px;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+
+.dashboard-page .status-legend i {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 3px;
+}
+
+.dashboard-page .status-legend strong {
+  flex-shrink: 0;
+  color: #2b3550;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* ---------- Recent Applications ---------- */
+
+.dashboard-page .recent-panel {
+  margin-bottom: 22px;
+}
+
+.dashboard-page .text-link {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px 11px;
+  color: #5547d4;
+  background: #f2f0ff;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font-size: 11px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.dashboard-page .text-link:hover {
+  color: #ffffff;
+  background: var(--dash-primary);
+}
+
+.dashboard-page .text-link svg {
+  transition: transform 0.2s ease;
+}
+
+.dashboard-page .text-link:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* ---------- Table ---------- */
+
+.dashboard-page .table-scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e8ecf4;
+  border-radius: 13px;
+  scrollbar-width: thin;
+  scrollbar-color: #c9cce5 #f5f6fa;
+}
+
+.dashboard-page .data-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
+  font-size: 12px;
+}
+
+.dashboard-page .data-table thead th {
+  padding: 15px 18px;
+  color: #69748b;
+  background: #f6f7fc;
+  border-bottom: 1px solid #e7ebf3;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  white-space: nowrap;
+}
+
+.dashboard-page .data-table tbody td {
+  padding: 15px 18px;
+  color: #5d6880;
+  background: #ffffff;
+  border-bottom: 1px solid #eef1f6;
+  vertical-align: middle;
+}
+
+.dashboard-page .data-table tbody tr {
+  transition: background 0.18s ease;
+}
+
+.dashboard-page .data-table tbody tr:hover td {
+  background: #f9f9ff;
+}
+
+.dashboard-page .data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ---------- Student Cell ---------- */
+
+.dashboard-page .student-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 205px;
+}
+
+.dashboard-page .table-avatar {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: #5a51cf;
+  background: linear-gradient(135deg, #f0eeff, #e5e6ff);
+  border: 1px solid #e2e2ff;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.dashboard-page .student-cell > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.dashboard-page .student-cell strong {
+  color: #2d3852;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.dashboard-page .student-cell span {
+  color: #8b94a8;
+  font-size: 10px;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Application Status Badges ---------- */
+
+.dashboard-page .status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  padding: 7px 11px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.5;
+  white-space: normal;
+}
+
+/* These match common statusClass() class names. */
+
+.dashboard-page .status-open {
+  color: #15835a;
+  background: #e9f9f0;
+  border-color: #d5f2e1;
+}
+
+.dashboard-page .status-shortlisted {
+  color: #4e56c9;
+  background: #efefff;
+  border-color: #dedfff;
+}
+
+.dashboard-page .status-pending {
+  color: #98610d;
+  background: #fff6df;
+  border-color: #f5e7bd;
+}
+
+.dashboard-page .status-rejected {
+  color: #cb4355;
+  background: #fff0f1;
+  border-color: #ffdcdf;
+}
+
+.dashboard-page .status-accepted {
+  color: #13825a;
+  background: #e6f8ee;
+  border-color: #d2f0df;
+}
+
+/* ---------- Empty State ---------- */
+
+.dashboard-page .data-table .empty-cell {
+  padding: 38px 20px;
+  color: #9099ac;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* ---------- Dashboard Note ---------- */
+
+.dashboard-page .dashboard-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 18px;
+  padding: 12px 14px;
+  color: #818ba0;
+  background: #f8f9fd;
+  border: 1px solid #edf0f6;
+  border-radius: 10px;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.dashboard-page .dashboard-note svg {
+  flex-shrink: 0;
+  color: #7778dc;
+}
+
+/* ---------- Focus Accessibility ---------- */
+
+.dashboard-page a:focus-visible {
+  outline: 3px solid rgba(85, 71, 232, 0.35);
+  outline-offset: 3px;
+}
+
+/* ---------- Large Screens ---------- */
+
+@media (min-width: 1500px) {
+  .dashboard-page {
+    padding: 38px;
+  }
+
+  .dashboard-page .dashboard-stats {
+    gap: 23px;
+  }
+
+  .dashboard-page .dashboard-charts {
+    gap: 27px;
+  }
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 1100px) {
+  .dashboard-page {
+    padding: 23px;
+  }
+
+  .dashboard-page .dashboard-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-page .dashboard-charts {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .dashboard-page .chart-area {
+    height: 280px;
+  }
+
+  .dashboard-page .pie-chart-area {
+    height: 250px;
+  }
+
+  .dashboard-page .welcome-art {
+    margin-right: 5px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 600px) {
+  .dashboard-page {
+    padding: 14px;
+  }
+
+  .dashboard-page .welcome-banner {
+    min-height: auto;
+    padding: 27px 20px;
+    margin-bottom: 20px;
+    border-radius: 18px;
+  }
+
+  .dashboard-page .welcome-banner h2 {
+    font-size: 28px;
+    letter-spacing: -0.8px;
+  }
+
+  .dashboard-page .welcome-banner p {
+    font-size: 12px;
+  }
+
+  .dashboard-page .welcome-eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.2px;
+  }
+
+  .dashboard-page .welcome-art {
+    display: none;
+  }
+
+  .dashboard-page .dashboard-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .dashboard-page .stat-card {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .dashboard-page .stat-icon,
+  .dashboard-page .stat-card .stat-icon {
+    width: 39px;
+    height: 39px;
+    margin-bottom: 13px;
+    border-radius: 11px;
+  }
+
+  .dashboard-page .panel {
+    padding: 18px 14px;
+    border-radius: 15px;
+  }
+
+  .dashboard-page .dashboard-charts {
+    gap: 16px;
+    margin-bottom: 18px;
+  }
+
+  .dashboard-page .panel-heading {
+    align-items: flex-start;
+    gap: 9px;
+  }
+
+  .dashboard-page .panel-heading h3 {
+    font-size: 14px;
+  }
+
+  .dashboard-page .panel-heading p {
+    font-size: 10px;
+  }
+
+  .dashboard-page .chart-period {
+    padding: 7px 8px;
+    font-size: 9px;
+  }
+
+  .dashboard-page .chart-area {
+    height: 240px;
+  }
+
+  .dashboard-page .pie-chart-area {
+    height: 220px;
+  }
+
+  .dashboard-page .status-legend {
+    gap: 8px;
+  }
+
+  .dashboard-page .status-legend > div {
+    padding: 9px 7px;
+  }
+
+  .dashboard-page .status-legend > div > span {
+    gap: 5px;
+    font-size: 9px;
+  }
+
+  .dashboard-page .status-legend strong {
+    font-size: 11px;
+  }
+
+  .dashboard-page .todo-banner {
+    flex-direction: column;
+    gap: 13px;
+    padding: 17px;
+    margin-bottom: 19px;
+  }
+
+  .dashboard-page .todo-banner > div {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .dashboard-page .todo-banner a {
+    text-align: left;
+  }
+
+  .dashboard-page .recent-panel .panel-heading {
+    flex-wrap: wrap;
+  }
+
+  .dashboard-page .data-table {
+    min-width: 650px;
+  }
+
+  .dashboard-page .data-table thead th,
+  .dashboard-page .data-table tbody td {
+    padding: 12px 13px;
+  }
+
+  .dashboard-page .dashboard-note {
+    align-items: flex-start;
+    font-size: 9px;
+  }
+}
+
+/* ---------- Reduced Motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-page *,
+  .dashboard-page *::before,
+  .dashboard-page *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

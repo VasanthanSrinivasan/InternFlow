@@ -1,0 +1,801 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin User",
+      "email": "admin@internflow.com",
+      "password": "c36af78afb9a526d187576a0bc908ad739083588a0551ddc8b724f5d84db261d",
+      "role": "admin",
+      "phone": "9000000001",
+      "college": "InternFlow HQ",
+      "createdAt": "2026-05-01T09:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Arun Kumar",
+      "email": "arun@example.com",
+      "password": "30524dedbb306d61219e02a14cfd4662251f4d5277034a18a945c3a93bf84c78",
+      "role": "student",
+      "phone": "9000000002",
+      "college": "Paavai Engineering College",
+      "createdAt": "2026-05-10T09:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "Priya Sharma",
+      "email": "priya@example.com",
+      "password": "b53dc9aca1f5506f32f749655bb85dcb2f040bc4f86976e984401d282883691b",
+      "role": "student",
+      "phone": "9000000003",
+      "college": "Anna University",
+      "createdAt": "2026-06-02T09:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "name": "Karthik Raj",
+      "email": "karthik@example.com",
+      "password": "3a6f1cb59edf5003f392cb375f148fc003af4a97e2d1f8c55e51c82eb93ad608",
+      "role": "student",
+      "phone": "9000000004",
+      "college": "PSG College of Technology",
+      "createdAt": "2026-07-15T09:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "name": "Sneha Ravi",
+      "email": "sneha@example.com",
+      "password": "a1f0ed9fe50bb8f88853411a1e446f938ac20c12d6a72c17b3d0cab8092bbcdd",
+      "role": "student",
+      "phone": "9000000005",
+      "college": "SRM Institute",
+      "createdAt": "2026-08-20T09:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "name": "Ravi Shankar",
+      "email": "ravi@internflow.com",
+      "password": "923a5c1488819f360cbc9aab6fafbe621fe768751c1f5832666db0980e76cb3b",
+      "role": "trainer",
+      "phone": "9000000006",
+      "college": "InternFlow Academy",
+      "createdAt": "2026-05-03T09:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "name": "Lakshmi Narayanan",
+      "email": "lakshmi@internflow.com",
+      "password": "a12369c5b7f2033310a5d79af080fb8140fa80113a18f7d083f10795075e7112",
+      "role": "trainer",
+      "phone": "9000000007",
+      "college": "InternFlow Academy",
+      "createdAt": "2026-05-04T09:00:00.000Z"
+    }
+  ],
+  "openings": [
+    {
+      "id": 1,
+      "title": "React Developer Intern",
+      "company": "TechNova Solutions",
+      "location": "Chennai",
+      "type": "Remote",
+      "duration": "3 Months",
+      "stipend": 12000,
+      "skills": [
+        "React",
+        "JavaScript",
+        "CSS"
+      ],
+      "status": "Open"
+    },
+    {
+      "id": 2,
+      "title": "Python Developer Intern",
+      "company": "CloudBridge",
+      "location": "Bengaluru",
+      "type": "Hybrid",
+      "duration": "6 Months",
+      "stipend": 15000,
+      "skills": [
+        "Python",
+        "SQL",
+        "Git"
+      ],
+      "status": "Open"
+    },
+    {
+      "title": "UI/UX Design Intern",
+      "company": "PixelCraft",
+      "location": "Remote",
+      "type": "Hybrid",
+      "duration": "3 Months",
+      "status": "Closed",
+      "stipend": 10000,
+      "skills": [
+        "Figma",
+        "Wireframing"
+      ],
+      "id": 3
+    },
+    {
+      "id": 4,
+      "title": "Node.js Backend Intern",
+      "company": "ServerWorks",
+      "location": "Coimbatore",
+      "type": "On-site",
+      "duration": "6 Months",
+      "stipend": 14000,
+      "skills": [
+        "Node.js",
+        "Express",
+        "MongoDB"
+      ],
+      "status": "Open"
+    },
+    {
+      "id": 5,
+      "title": "IoT Embedded Intern",
+      "company": "SmartGrid Labs",
+      "location": "Salem",
+      "type": "On-site",
+      "duration": "3 Months",
+      "stipend": 9000,
+      "skills": [
+        "Arduino",
+        "ESP32",
+        "C++"
+      ],
+      "status": "Open"
+    },
+    {
+      "id": 6,
+      "title": "Data Analyst Intern",
+      "company": "InsightHub",
+      "location": "Remote",
+      "type": "Remote",
+      "duration": "3 Months",
+      "stipend": 11000,
+      "skills": [
+        "Excel",
+        "SQL",
+        "Power BI"
+      ],
+      "status": "Closed"
+    }
+  ],
+  "applications": [
+    {
+      "id": 1,
+      "userId": 2,
+      "openingId": 1,
+      "student": "Arun Kumar",
+      "email": "arun@example.com",
+      "status": "Under Review",
+      "appliedOn": "2026-05-18"
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "openingId": 2,
+      "student": "Priya Sharma",
+      "email": "priya@example.com",
+      "status": "Shortlisted",
+      "appliedOn": "2026-06-12"
+    },
+    {
+      "id": 3,
+      "userId": 4,
+      "openingId": 1,
+      "student": "Karthik Raj",
+      "email": "karthik@example.com",
+      "status": "Approved",
+      "appliedOn": "2026-06-25"
+    },
+    {
+      "id": 4,
+      "userId": 5,
+      "openingId": 3,
+      "student": "Sneha Ravi",
+      "email": "sneha@example.com",
+      "status": "Under Review",
+      "appliedOn": "2026-07-08"
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "openingId": 4,
+      "student": "Arun Kumar",
+      "email": "arun@example.com",
+      "status": "Rejected",
+      "appliedOn": "2026-07-22"
+    },
+    {
+      "id": 6,
+      "userId": 3,
+      "openingId": 3,
+      "student": "Priya Sharma",
+      "email": "priya@example.com",
+      "status": "Approved",
+      "appliedOn": "2026-08-14"
+    },
+    {
+      "id": 7,
+      "userId": 4,
+      "openingId": 5,
+      "student": "Karthik Raj",
+      "email": "karthik@example.com",
+      "status": "Shortlisted",
+      "appliedOn": "2026-09-03"
+    },
+    {
+      "id": 8,
+      "userId": 5,
+      "openingId": 1,
+      "student": "Sneha Ravi",
+      "email": "sneha@example.com",
+      "status": "Under Review",
+      "appliedOn": "2026-09-19"
+    },
+    {
+      "id": 9,
+      "userId": 2,
+      "openingId": 5,
+      "student": "Arun Kumar",
+      "email": "arun@example.com",
+      "status": "Under Review",
+      "appliedOn": "2026-10-10"
+    },
+    {
+      "id": 10,
+      "userId": 3,
+      "openingId": 4,
+      "student": "Priya Sharma",
+      "email": "priya@example.com",
+      "status": "Shortlisted",
+      "appliedOn": "2026-10-12"
+    },
+    {
+      "id": 11,
+      "userId": 4,
+      "openingId": 2,
+      "student": "Karthik Raj",
+      "email": "karthik@example.com",
+      "status": "Approved",
+      "appliedOn": "2026-10-14"
+    }
+  ],
+  "mentors": [
+    {
+      "id": 1,
+      "name": "Divya Krishnan",
+      "role": "Senior React Developer",
+      "email": "divya@example.com",
+      "skills": [
+        "React",
+        "JavaScript",
+        "Node.js"
+      ],
+      "students": 8,
+      "experience": "6 years",
+      "status": "Available"
+    },
+    {
+      "id": 2,
+      "name": "Sanjay Kumar",
+      "role": "Python Engineer",
+      "email": "sanjay@example.com",
+      "skills": [
+        "Python",
+        "Django",
+        "SQL"
+      ],
+      "students": 6,
+      "experience": "5 years",
+      "status": "Busy"
+    },
+    {
+      "id": 3,
+      "name": "Rahul Dev",
+      "role": "Full Stack Developer",
+      "email": "rahul@example.com",
+      "skills": [
+        "React",
+        "Node.js",
+        "MongoDB"
+      ],
+      "students": 10,
+      "experience": "7 years",
+      "status": "Available"
+    },
+    {
+      "id": 4,
+      "name": "Meena Devi",
+      "role": "UI/UX Designer",
+      "email": "meena@example.com",
+      "skills": [
+        "Figma",
+        "UI/UX",
+        "CSS"
+      ],
+      "students": 4,
+      "experience": "4 years",
+      "status": "Available"
+    }
+  ],
+  "attendance": [
+    {
+      "id": 1,
+      "userId": 2,
+      "date": "2026-10-14",
+      "status": "Present"
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "date": "2026-10-14",
+      "status": "Present"
+    },
+    {
+      "id": 3,
+      "userId": 4,
+      "date": "2026-10-14",
+      "status": "Absent"
+    },
+    {
+      "id": 4,
+      "userId": 5,
+      "date": "2026-10-14",
+      "status": "Leave"
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "date": "2026-10-15",
+      "status": "Present"
+    },
+    {
+      "id": 6,
+      "userId": 3,
+      "date": "2026-10-15",
+      "status": "Present"
+    },
+    {
+      "id": 7,
+      "userId": 4,
+      "date": "2026-10-15",
+      "status": "Present"
+    },
+    {
+      "id": 8,
+      "userId": 5,
+      "date": "2026-10-15",
+      "status": "Leave"
+    },
+    {
+      "userId": 2,
+      "date": "2026-10-29",
+      "status": "Present",
+      "id": 9
+    },
+    {
+      "userId": 5,
+      "date": "2026-10-29",
+      "status": "Present",
+      "id": 10
+    },
+    {
+      "userId": 3,
+      "date": "2026-10-29",
+      "status": "Present",
+      "id": 11
+    },
+    {
+      "userId": 4,
+      "date": "2026-10-29",
+      "status": "Present",
+      "id": 12
+    }
+  ],
+  "evaluations": [
+    {
+      "userId": 4,
+      "mentorId": 1,
+      "technical": 8,
+      "communication": 9,
+      "teamwork": 8,
+      "feedback": "Good progress and strong problem-solving skills.",
+      "createdAt": "2026-10-12T10:00:00.000Z",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "mentorId": 4,
+      "technical": 9,
+      "communication": 8,
+      "teamwork": 9,
+      "feedback": "Excellent design thinking. Keep documenting your decisions.",
+      "createdAt": "2026-10-13T10:00:00.000Z"
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "title": "Complete React Development",
+      "category": "Web Development",
+      "level": "Beginner",
+      "instructor": "Arun Kumar",
+      "duration": "8h 30m",
+      "rating": 4.8,
+      "students": 1280,
+      "description": "Learn components, hooks, routing and real-world React projects.",
+      "skills": [
+        "React",
+        "JavaScript",
+        "Hooks"
+      ],
+      "thumbnail": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=900",
+      "modules": [
+        {
+          "id": "react-m1",
+          "title": "React Fundamentals",
+          "lessons": [
+            {
+              "id": "react-l1",
+              "title": "Introduction to React",
+              "duration": "1 hr 20 min",
+              "videoUrl": "https://www.youtube.com/watch?v=SqcY0GlETPk"
+            },
+            {
+              "id": "react-l2",
+              "title": "Components and JSX",
+              "duration": "16 min",
+              "videoUrl": "https://youtu.be/TyZQORWcquU?si=Oer38qO8YGex75fz"
+            }
+          ]
+        },
+        {
+          "id": "react-m2",
+          "title": "React Hooks",
+          "lessons": [
+            {
+              "id": "react-l3",
+              "title": "Understanding useState",
+              "duration": "16 min",
+              "videoUrl": "https://youtu.be/O6P86uwfdR0?si=j5Yil41BatAlpITZ"
+            },
+            {
+              "id": "react-l4",
+              "title": "Understanding useEffect",
+              "duration": "20 min",
+              "videoUrl": "https://youtu.be/L-1sP3Ljhsg?si=k4rVRgIJdNxNT9rK"
+            },
+            {
+              "id": "lesson-1793259690545-ir0lo",
+              "title": "React Router",
+              "duration": "25 min",
+              "videoUrl": "https://youtu.be/oTIJunBa6MA?si=j4vSLglaEYFzQKdJ"
+            }
+          ]
+        }
+      ],
+      "createdBy": 1
+    },
+    {
+      "id": 2,
+      "title": "Python Programming Essentials",
+      "category": "Programming",
+      "level": "Beginner",
+      "instructor": "Priya Sharma",
+      "duration": "6h 15m",
+      "rating": 4.7,
+      "students": 960,
+      "description": "Learn Python fundamentals, functions and data structures.",
+      "skills": [
+        "Python",
+        "Functions",
+        "Data Structures"
+      ],
+      "thumbnail": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=900",
+      "modules": [
+        {
+          "id": "python-m1",
+          "title": "Python Basics",
+          "lessons": [
+            {
+              "id": "python-l1",
+              "title": "Introduction to Python",
+              "duration": "60 min",
+              "videoUrl": "https://www.youtube.com/watch?v=kqtD5dpn9C8"
+            },
+            {
+              "id": "python-l2",
+              "title": "Variables and Data Types",
+              "duration": "10 min",
+              "videoUrl": "https://youtu.be/Rtmgt2Qfqr4?si=4C-KjG3JmgZKY6Ze"
+            }
+          ]
+        }
+      ],
+      "createdBy": 1
+    },
+    {
+      "id": 3,
+      "title": "UI/UX Design Fundamentals",
+      "category": "Design",
+      "level": "Beginner",
+      "instructor": "Meena Devi",
+      "duration": "5h 40m",
+      "rating": 4.9,
+      "students": 740,
+      "description": "Learn wireframing, design systems and prototyping.",
+      "skills": [
+        "Figma",
+        "Wireframes",
+        "Prototyping"
+      ],
+      "thumbnail": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900",
+      "modules": [
+        {
+          "id": "uiux-m1",
+          "title": "Design Foundations",
+          "lessons": [
+            {
+              "id": "uiux-l1",
+              "title": "Introduction to UI/UX",
+              "duration": "1 hr 20 min",
+              "videoUrl": "https://www.youtube.com/watch?v=c9Wg6Cb_YlU"
+            },
+            {
+              "id": "uiux-l2",
+              "title": "Wireframing",
+              "duration": "15 min",
+              "videoUrl": "https://youtu.be/qpH7-KFWZRI"
+            }
+          ]
+        }
+      ],
+      "createdBy": 1
+    },
+    {
+      "id": 4,
+      "title": "SQL Database Masterclass",
+      "category": "Data",
+      "level": "Intermediate",
+      "instructor": "Karthik Raj",
+      "duration": "7h 10m",
+      "rating": 4.8,
+      "students": 850,
+      "description": "Master SQL queries, joins and relational database design.",
+      "skills": [
+        "SQL",
+        "PostgreSQL",
+        "Database Design"
+      ],
+      "thumbnail": "https://imgs.search.brave.com/mH4nSxMQdTeBHQnQeXCDe_4jF9IWnwKnIsmE54MeWrw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/c2h1dHRlcnN0b2Nr/LmNvbS9pbWFnZS1p/bGx1c3RyYXRpb24v/c3FsLXN0YXRlbWVu/dHMtc3RydWN0dXJl/ZC1xdWVyeS1sYW5n/dWFnZS0yNjBudy0y/MzM2MjE4MDMxLmpw/Zw",
+      "modules": [
+        {
+          "id": "sql-m1",
+          "title": "SQL Basics",
+          "lessons": [
+            {
+              "id": "sql-l1",
+              "title": "Introduction to Databases",
+              "duration": "14 min",
+              "videoUrl": "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+            },
+            {
+              "id": "sql-l2",
+              "title": "SELECT Queries",
+              "duration": "10 min",
+              "videoUrl": "https://youtu.be/HYD8KjPB9F8"
+            }
+          ]
+        }
+      ],
+      "createdBy": 1
+    }
+  ],
+  "progress": [
+    {
+      "id": 1,
+      "userId": 2,
+      "courseId": 1,
+      "lessonIds": [
+        "react-l1",
+        "react-l2",
+        "react-l3",
+        "react-l4",
+        "lesson-1793259690545-ir0lo"
+      ]
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "courseId": 3,
+      "lessonIds": [
+        "uiux-l1",
+        "uiux-l2"
+      ]
+    },
+    {
+      "id": 3,
+      "userId": 4,
+      "courseId": 2,
+      "lessonIds": [
+        "python-l1"
+      ]
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "courseId": 2,
+      "lessonIds": []
+    }
+  ],
+  "enrollments": [
+    {
+      "id": 1,
+      "userId": 2,
+      "courseId": 1,
+      "status": "Approved",
+      "requestedAt": "2026-10-05T09:00:00.000Z",
+      "reviewedBy": 6,
+      "reviewedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "courseId": 3,
+      "status": "Approved",
+      "requestedAt": "2026-10-06T09:00:00.000Z",
+      "reviewedBy": 1,
+      "reviewedAt": "2026-10-06T10:30:00.000Z"
+    },
+    {
+      "id": 3,
+      "userId": 4,
+      "courseId": 2,
+      "status": "Approved",
+      "requestedAt": "2026-10-07T09:00:00.000Z",
+      "reviewedBy": 7,
+      "reviewedAt": "2026-10-07T11:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "userId": 4,
+      "courseId": 1,
+      "status": "Pending",
+      "requestedAt": "2026-10-14T09:00:00.000Z",
+      "reviewedBy": null,
+      "reviewedAt": null
+    },
+    {
+      "id": 5,
+      "userId": 5,
+      "courseId": 2,
+      "status": "Approved",
+      "requestedAt": "2026-10-15T09:00:00.000Z",
+      "reviewedBy": 1,
+      "reviewedAt": "2026-10-29T06:24:26.987Z"
+    },
+    {
+      "id": 6,
+      "userId": 2,
+      "courseId": 2,
+      "status": "Pending",
+      "requestedAt": "2026-10-29T07:13:32.353Z",
+      "reviewedBy": null,
+      "reviewedAt": null
+    }
+  ],
+  "assessments": [
+    {
+      "id": 1,
+      "courseId": 1,
+      "type": "Task",
+      "title": "Build a counter with hooks",
+      "description": "Create a React counter using useState and push it to GitHub. Share the repo link.",
+      "dueDate": "2026-10-30",
+      "maxMarks": 10,
+      "createdBy": 6
+    },
+    {
+      "id": 2,
+      "courseId": 1,
+      "type": "Test",
+      "title": "React Basics Quiz",
+      "description": "Answer the questions in the box: What is JSX? Difference between props and state? What does useEffect do?",
+      "dueDate": "2026-11-02",
+      "maxMarks": 20,
+      "createdBy": 6
+    },
+    {
+      "id": 3,
+      "courseId": 1,
+      "type": "Assignment",
+      "title": "Portfolio page",
+      "description": "Build a one-page portfolio with React Router (Home, Projects, Contact) and share the deployed link.",
+      "dueDate": "2026-11-10",
+      "maxMarks": 50,
+      "createdBy": 1
+    },
+    {
+      "id": 4,
+      "courseId": 2,
+      "type": "Task",
+      "title": "Python file organizer script",
+      "description": "Write a Python script that sorts files in a folder by extension.",
+      "dueDate": "2026-10-31",
+      "maxMarks": 15,
+      "createdBy": 7
+    },
+    {
+      "id": 5,
+      "courseId": 3,
+      "type": "Assignment",
+      "title": "Login screen wireframe",
+      "description": "Design a login and register wireframe in Figma and share the view link.",
+      "dueDate": "2026-11-05",
+      "maxMarks": 25,
+      "createdBy": 6
+    }
+  ],
+  "submissions": [
+    {
+      "id": 1,
+      "assessmentId": 1,
+      "courseId": 1,
+      "userId": 2,
+      "content": "Counter built with useState and a reset button. Added keyboard shortcuts too.",
+      "link": "https://github.com/example/counter-app",
+      "submittedAt": "2026-10-12T10:00:00.000Z",
+      "status": "Graded",
+      "marks": 9,
+      "feedback": "Clean code. Add a README next time.",
+      "gradedBy": 6,
+      "gradedAt": "2026-10-13T09:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "assessmentId": 2,
+      "courseId": 1,
+      "userId": 2,
+      "content": "JSX is a syntax extension. Props are read-only inputs, state is internal and changeable. useEffect runs side effects after render.",
+      "link": "",
+      "submittedAt": "2026-10-15T08:30:00.000Z",
+      "status": "Submitted",
+      "marks": null,
+      "feedback": "",
+      "gradedBy": null,
+      "gradedAt": null
+    },
+    {
+      "id": 3,
+      "assessmentId": 5,
+      "courseId": 3,
+      "userId": 3,
+      "content": "Wireframe with email/password, forgot password and social login.",
+      "link": "https://www.figma.com/file/example",
+      "submittedAt": "2026-10-14T16:20:00.000Z",
+      "status": "Graded",
+      "marks": 20,
+      "feedback": "good try",
+      "gradedBy": 1,
+      "gradedAt": "2026-10-29T06:07:47.048Z"
+    },
+    {
+      "id": 4,
+      "assessmentId": 4,
+      "courseId": 2,
+      "userId": 4,
+      "content": "Script uses os and shutil to move files into folders by extension.",
+      "link": "https://github.com/example/file-organizer",
+      "submittedAt": "2026-10-15T19:45:00.000Z",
+      "status": "Submitted",
+      "marks": null,
+      "feedback": "",
+      "gradedBy": null,
+      "gradedAt": null
+    }
+  ]
+}
